@@ -2,10 +2,12 @@ import { Link, useResolvedPath } from "react-router-dom";
 import { ShoppingCartIcon } from "lucide-react";
 import { ShoppingBagIcon } from "lucide-react";
 import ThemeSelector from "./ThemeSelector";
+import { useProductStore } from "../store/useProductStore";
 
 function Navbar() {
   const { pathname } = useResolvedPath();//this is added to get the current path of the page for example if we are on home page then pathname will be "/" and if we are on product page then pathname will be "/product/:id"
   const isHomePage = pathname === "/";// this is added to check if we are on home page or not because we want to show the cart icon only on home page and hide it on product page
+  const {products}=useProductStore();
   return (
     <div className="bg-base-100/80 backdrop-blur-lg border-b border-base-content/10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto">
@@ -33,7 +35,7 @@ function Navbar() {
                 <div className="p-2 rounded-full hover:bg-base-200 transition-colors">
                   <ShoppingBagIcon className="size-5" />
                   <span className="badge badge-sm badge-primary indicator-item">
-                    8
+                    {products.length}
                   </span>
                 </div>
               </div>
