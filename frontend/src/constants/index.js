@@ -1,8 +1,12 @@
+// This file holds constant data (data that never changes) for our application.
+// In this case, it stores an array of all the different color themes the user can choose from.
+// We export it so any component (like ThemeSelector.jsx) can import and use it.
+
 export const THEMES = [
   {
-    name: "pastel",
-    label: "Pastel",
-    colors: ["#ffd8d8", "#b7e4c7", "#d8b4fe"],
+    name: "pastel",     // The internal name of the theme used by DaisyUI
+    label: "Pastel",    // The nice, readable label shown to the user in the UI
+    colors: ["#ffd8d8", "#b7e4c7", "#d8b4fe"], // A few sample colors to show a preview of the theme
   },
   {
     name: "retro",

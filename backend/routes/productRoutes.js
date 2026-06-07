@@ -1,21 +1,44 @@
-//backend/routes/productRoutes.js
-//this file defines the routes for the products API and maps them to the corresponding controller functions. It uses express.Router() to create a router object and exports it for use in the main server file.
+// backend/routes/productRoutes.js
+// This file defines the specific URLs (endpoints) for the products API.
+// It maps these URLs to the corresponding controller functions (the logic).
+// It uses express.Router() to group all these product-related routes together.
 
-import expres from "express";
+// Import express to use its Router feature
+import express from "express";
+
+// Import all the logic functions (controllers) that handle what to do when these routes are visited
 import {
-     createProduct ,
+     createProduct,
      getProducts,
      getProduct,
      updateProduct,
      deleteProduct
-     } from "../controllers/productController.js";
+} from "../controllers/productController.js";
 
-const router=expres.Router();
+// Create a new router object. Think of this as a mini-app just for handling product routes.
+const router = express.Router();
 
-router.post("/",createProduct); //function are called here 
-router.get("/",getProducts);
-router.get("/:id",getProduct);
-router.put("/:id",updateProduct);
-router.delete("/:id",deleteProduct);
+// Define the routes:
 
+// 1. CREATE: When a POST request is made to "/" (which translates to "/api/products/" in server.js)
+// It will run the `createProduct` function to save a new product.
+router.post("/", createProduct); 
+
+// 2. READ ALL: When a GET request is made to "/"
+// It will run `getProducts` to fetch all products from the database.
+router.get("/", getProducts);
+
+// 3. READ ONE: When a GET request is made to a specific ID (like "/api/products/5")
+// The ":id" is a dynamic variable. It runs `getProduct` to fetch just that one product.
+router.get("/:id", getProduct);
+
+// 4. UPDATE: When a PUT request is made to a specific ID
+// It runs `updateProduct` to modify the existing product with that ID.
+router.put("/:id", updateProduct);
+
+// 5. DELETE: When a DELETE request is made to a specific ID
+// It runs `deleteProduct` to remove that product from the database.
+router.delete("/:id", deleteProduct);
+
+// Export the router so it can be imported and used in server.js
 export default router;

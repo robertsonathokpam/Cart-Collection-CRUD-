@@ -195,7 +195,7 @@ NODE_ENV=development
 
 ---
 
-## ⚙️ Installation & Usage Guide
+##  Installation & Usage Guide
 
 Follow these steps to configure and run the application locally:
 
