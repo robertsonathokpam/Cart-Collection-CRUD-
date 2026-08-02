@@ -1,8 +1,8 @@
-# 🚀 The PERN Stack: A Complete Beginner's Guide
+#  The PERN Stack: A Complete Beginner's Guide
 
 Welcome to the world of full-stack web development! This file is designed specifically for you, assuming you are completely new to this stack. We'll break down exactly what a "PERN stack" is, how the pieces fit together, and how this specific application works.
 
-## 🧱 What is the PERN Stack?
+##  What is the PERN Stack?
 
 The **PERN** stack is a popular collection of technologies used to build modern, interactive, and data-driven websites. Each letter represents a specific technology that plays a crucial role:
 
@@ -13,7 +13,7 @@ The **PERN** stack is a popular collection of technologies used to build modern,
 
 ---
 
-## 🔌 How Do They Talk to Each Other? (The Flow of Data)
+##  How Do They Talk to Each Other? (The Flow of Data)
 
 Imagine ordering food at a restaurant.
 
@@ -24,7 +24,7 @@ Imagine ordering food at a restaurant.
 
 ---
 
-## 📁 How is THIS Project Organized?
+##  How is THIS Project Organized?
 
 This project is separated into two main folders: `frontend` and `backend`. This is a very common way to structure apps, keeping the "client-side" (what the user sees) separate from the "server-side" (the behind-the-scenes logic and data).
 
@@ -48,7 +48,7 @@ This is your React application. It was likely created using a tool called Vite (
 
 ---
 
-## 💡 How to Read the Code
+##  How to Read the Code
 
 I have gone through every major file in both the `backend` and `frontend` folders and added detailed, line-by-line comments. 
 

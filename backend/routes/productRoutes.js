@@ -22,7 +22,20 @@ const router = express.Router();
 
 // 1. CREATE: When a POST request is made to "/" (which translates to "/api/products/" in server.js)
 // It will run the `createProduct` function to save a new product.
-router.post("/", createProduct); 
+//example when someone search on url like http://localhost:3000/api/products/ create product this 
+//  link in url bar and enter or click on create product button this create product 
+// function will run 
+// example postman post request
+// url: http://localhost:3000/api/products/
+// method: POST
+// body: {
+//     "name": "product1",
+//     "price": 100,
+//     "description": "description1"
+// }
+
+
+router.post("/", createProduct);
 
 // 2. READ ALL: When a GET request is made to "/"
 // It will run `getProducts` to fetch all products from the database.
